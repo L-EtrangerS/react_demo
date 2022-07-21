@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 2fr 1fr 2fr;
+            grid-auto-rows: 100px;
+        }
+        .container>div{
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+        }
+        .box1{
+            background-color: blue!important;
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            z-index: 100;
+        }
+        .box2{
+            width: 300px!important;
+            height: 300px!important;
+            grid-column-end: 1;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
